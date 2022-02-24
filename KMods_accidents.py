@@ -6,6 +6,16 @@ import string
 #récupérer et transformer les données
 df = pd.read_csv('/features_with_plan_france.csv',';')
 df = df.drop("Unnamed: 0", axis=1)
+df = df[df['cycleway'].notna()]
+df = df[df['highway'].notna()]
+df = df[df['lanes'].notna()]
+df = df[df['lit'].notna()]
+df = df[df['agg'].notna()]
+df = df[df['int'].notna()]
+df = df[df['bidirectionnel'].notna()]
+df = df[df['rectiligne'].notna()]
+
+
 
 #Créer 7 cluster avec la méthode des KMeans
 kmode = KModes(n_clusters=7, init = "random", n_init = 5, verbose=1)
