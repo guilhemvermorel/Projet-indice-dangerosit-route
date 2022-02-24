@@ -15,4 +15,8 @@ Le projet a commencé le 03 octobre 2021 et pris fin le 15 décembre 2021.
 
 <B> Réalisation : </B>
   
-  Ce git contient ainsi le programme qui caractérisent l'indice de dangerosité d'une route 
+  Ce git contient ainsi le programme qui caractérisent l'indice de dangerosité d'une route à partir de l'algorithme KModes. Il s'agit d'un aglorithme de clustering qui utilise la méthode des K plus proches voisins sur des variables catégoriales. Et un Dataset comportant un ensemble d'accidents et des variables associées à la forme de la route, la luminosité, etc. 
+  Le principe est le suivant, nous regroupons avec cet algorithme les routes qui se ressemblent entre elles. En classant, ensuite, ces différents clusters par nombre d'individus à l'intérieur, on obtient une échelle de dangerosité des routes. 
+  La suite est alors simple, pour chaque nouvelles routes que l'on veut tester, on récupère ses informations sur l'API d'Open Street Map et on identifie son cluster d'appartenance. 
+  
+  On pourrait même aller plus loin en rajoutant des informations temporelles comme la météo, l'heure, la fréquentation. 
